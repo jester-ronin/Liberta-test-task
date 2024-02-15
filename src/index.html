@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test task</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Заголовок страницы -->
+    </header>
+
+    <main>
+        <section class="left-column">
+            <!-- Содержимое левой части страницы -->
+            <img src="../modules/room.jpg" id="side-image">
+        </section>
+
+        <section class="middle-column">
+            <!-- Содержимое средней части страницы -->
+            <h1>
+                Рассчитать стоимость ремонта <br> квартиры за 1 минуту
+            </h1>
+            <p>
+                Вид ремонта:
+            </p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1">
+                <label class="form-check-label" for="inlineRadio1">Капитальный ремонт</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2">
+                <label class="form-check-label" for="inlineRadio2">Ремонт под ключ</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                    value="option3">
+                <label class="form-check-label" for="inlineRadio3">Ремонт премиум класс</label>
+            </div>
+
+            <p id="typeOfEstate">
+                Тип недвижимости:
+            </p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="propertyType" id="propertyType1" value="option1">
+                <label class="form-check-label" for="propertyType1">Новостройка</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="propertyType" id="propertyType2" value="option2">
+                <label class="form-check-label" for="propertyType2">Вторичка</label>
+            </div>
+
+            <p>
+                Укажите площадь:
+            </p>
+            <div class="form-range-container">
+                <input type="range" class="form-range" id="customRange1" min="0" max="100">
+                <label for="customRange1" class="form-label">50м²</label>
+            </div>
+
+
+        </section>
+
+        <section class="right-column">
+            <!-- Содержимое правой части страницы -->
+            <h2> Сроки: </h2>
+            <p>
+                от 10 до 12 дней
+            </p>
+
+            <h2> Стоимость: </h2>
+            
+            <p>
+                3000$
+            </p>
+            <button type="button" class="btn btn-warning">Получить консультацию 🠒</button>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Футер страницы -->
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
