@@ -1,18 +1,40 @@
 import './index.html';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-console.log('Hello from index.js!');
 
-document.addEventListener('DOMContentLoaded', function() {
-    const rangeInput = document.getElementById('customRange1');
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+    const rangeInput = document.getElementById('rangeSlide');
     const numberLabel = document.querySelector('.form-label');
 
-    rangeInput.addEventListener('input', function() {
-        const newValue = (this.value - this.min) / (this.max - this.min) * 100;
-        numberLabel.textContent = this.value + "м²";
-        numberLabel.style.left = `calc(${newValue}% - 10px)`;
-        console.log(`calc(${newValue}% - 10px)`)
+
+    function changeSquare(input) {
+        input.addEventListener('input', function () {
+            numberLabel.textContent = this.value + "м²";
+        });
+    }
+
+
+
+    const button = document.getElementById('consultationButton');
+    const backLink = document.getElementById('backLink');
+    const content1 = document.getElementById('main1');
+    const content2 = document.getElementById('main2');
+
+
+
+    button.addEventListener('click', function () {
+        content1.style.display = 'none';
+        content2.style.display = 'flex';
     });
-});
 
+    backLink.addEventListener('click', function () {
+        content1.style.display = 'flex';
+        content2.style.display = 'none';
+    })
 
+    changeSquare(rangeInput)
+
+})

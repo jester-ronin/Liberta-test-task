@@ -1,157 +1,174 @@
-/* Общие стили */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header,
-footer {
-  background-color: #333;
-  color: #fff;
-}
-
-main {
-  display: flex;
-}
-
-
-/* Стили для каждой колонки */
-.left-column,
-.middle-column,
-.right-column {
-  height: 1000px;
-  /* Устанавливаем высоту колонок (в данном случае 1000px) */
-}
-
-.left-column {
-  background-color: #a72c2c;
-  width: 20%;
-  /* Левая колонка занимает 20% экрана */
-}
-
-.middle-column {
-  background-color: #F5F5F5;
-  width: 50%;
-  /* Средняя колонка занимает 50% экрана */
-}
-
-
-.middle-column h1 {
-  margin-top: 60px;
-  margin-left: 70px;
-  font-size: 45px;
-}
-
-.middle-column p {
-  margin-top: 110px;
-  margin-left: 70px;
-  font-size: 35px;
-}
-
-
-
-.middle-column .form-check-input[type="radio"] {
+#main2 {
   display: none;
-  /* Скрыть стандартные радиокнопки */
 }
 
-.middle-column .form-check-label {
-  cursor: pointer;
+#rangeSlide {
+  width: 85%;
 }
 
-/* Создание квадратных кнопок */
-.middle-column .form-check-input[type="radio"]+.form-check-label::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin-right: 0.40rem;
-  border: 1px solid #000000;
-  border-radius: 4px;
-  margin-left: 50px;
-  margin-top: 20px;
+h1 {
+  font-size: 3em !important;
 }
 
-/* Заполнение кнопок при выборе */
-.middle-column .form-check-input[type="radio"]:checked+.form-check-label::before {
-  background-color: #dba226;
+
+#middleSection {
+  background-color: #FFFFF0;
 }
 
-#customRange1 {
-  margin-left: 70px;
-}
-
-.right-column {
-  background-color: #0A0A0A;
-  width: 30%;
-  /* Правая колонка занимает 30% экрана */
-  color: #fff;
-  padding: 20px;
-  /* Добавим немного отступов для улучшения визуального восприятия */
-}
-
-.right-column p {
-  margin-left: 130px;
-  margin-top: 10px;
-  color: #dba226;
-  font-size: 40px;
-
-}
-
-.right-column h2 {
-  margin-left: 130px;
+#middleDiv>div {
   margin-top: 100px;
 }
 
-
-.right-column .btn {
-  margin-top: 350px;
-  /* Устанавливаем отступ сверху */
-  margin-left: 130px;
-  border-radius: 40px;
-  height: 50px;
-  width: 260px
+#middleDiv>div:first-child {
+  margin-top: 70px;
 }
 
-
-#side-image {
-  width: 100%;
-  /* Использование всей доступной ширины контейнера */
-  height: 100%;
-  /* Использование всей доступной высоты контейнера */
-  object-fit: cover;
-  /* Изображение будет заполнять контейнер, сохраняя соотношение сторон */
-  object-position: 5%;
+#middleDiv p {
+  font-size: 2em;
 }
 
-#typeOfEstate {
-  margin-top: 120px;
-}
-
-/* Общие стили */
-.form-range-container {
-  position: relative;
-  /* Положение элементов относительно контейнера */
-  width: 85%;
-  margin-top: 50px;
-}
-
-/* Стили для ползунка */
-.form-range {
-  width: 100%;
-  /* Ширина ползунка по размеру контейнера */
-}
-
-/* Стили для числового значения над ползунком */
-.form-label {
+.radio-label input[type="radio"] {
   position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #000000;
-  padding: 5px 10px;
-  margin-left: 65px;
-  white-space: nowrap;
-  /* Предотвращает перенос строки */
+  opacity: 0;
+}
+
+.radio-label label {
+  position: relative;
+  cursor: pointer;
+  line-height: 30px;
+  padding: 0 0 0 35px;
+}
+
+.radio-label label:before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #CDD1DA;
+  border-radius: 0%;
+  background: #FFF;
+}
+
+.radio-label label:after {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: rgb(165, 165, 165);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+  opacity: 0;
+  transition: .2s;
+}
+
+.radio-label input[type="radio"]:checked+label:after {
+  opacity: 1;
+  top: 1px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+
+#sideImage {
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  #sideImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+  }
+
+  #leftSection {
+    height: 120px;
+    width: 100%;
+  }
+
+  #consultation {
+    font-size: 1.2em !important;
+  }
+
+  h1 {
+    font-size: 1.7em !important;
+  }
+
+  .questionTitle p {
+    font-size: 1.3em !important;
+  }
+}
+
+#rightSection {
+  background-color: #181818;
+}
+
+#rightDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rightDiv>div {
+  margin-top: 150px;
+}
+
+#rightDiv p {
+  font-size: 1.5em;
+  color: rgba(226, 194, 50, 0.925);
+}
+
+#rightDiv h2 {
+  font-size: 2em;
+  color: #FFFFF0;
+}
+
+#consultationButton {
+  border-radius: 50px;
+}
+
+#formContainer>div {
+  padding-bottom: 25px;
+}
+
+.form-control {
+  border-radius: 0px !important;
+}
+
+#radio-button-consult {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-label {
+  font-size: 1.0em;
+}
+
+#backLink {
+  opacity: 0.5;
+  color: black;
+  font-size: 1.5em !important;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .radio-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  #backLink {
+    display: none;
+  }
+
 }
